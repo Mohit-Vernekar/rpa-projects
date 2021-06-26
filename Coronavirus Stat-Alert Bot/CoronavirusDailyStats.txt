@@ -1,0 +1,10 @@
+The coronavirus stats in India at {0} are as follows:
+
+{1} 
+
+For more information: https://www.mygov.in/covid-19
+
+Kind regards,
+Coronavirus Daily Stats Robot.
+
+This is an automatically generated email issued in public interest by government of India.

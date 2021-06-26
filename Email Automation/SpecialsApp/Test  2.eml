@@ -1,0 +1,86 @@
+Delivered-To: mohitvernekar23@gmail.com
+Received: from mail-sor-f41.google.com (mail-sor-f41.google.com. [209.85.220.41])
+	by mx.google.com with SMTPS id q17sor13281705iow
+	.7.2020.08.01.10.30.59        for
+	<mohitvernekar23@gmail.com>        (Google Transport Security); Sat, 01
+	Aug 2020 10:30:59 -0700 (PDT)
+X-Received: by 2002:a02:b159:: with SMTP id s25mr11371621jah.4.1596303058683;
+ Sat, 01 Aug 2020 10:30:58 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1596303059; cv=none; d=google.com;
+	s=arc-20160816;
+	b=kzCckLC7ZAj7I6GmWyIZJzqVDBnAchHfFf6iS5xxdTeamCT9J85RIyi9svpK8dcGAR/hoHUvxsU
+	/EKX+dcrlcbWInlK8VXg16FyGPJgHLCNO7znMfzNn/RVOxun6loj3pma/5ZilWFpwTyPvAmxKtJY8
+	sE8c+ZvNO8NVmgyeN7D4TOxlr6irp7n5LxP0Ss9TfQxRks2BbpMsO+Bfc2PwVY7P5SZrkEQDZZ1FV
+	BIeDo4hZpwBPJTfxTe0YTQStsLlbMYhIIXF8WN3QBqhvfG/g5fGFeLCNZ/qYWpDg1b4U916xY6zN6
+	h/9JWzn2exPhT/z3XmA5PAPsddekAj/CALFQ==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com;
+	s=arc-20160816;
+	h=to:subject:message-id:date:from:mime-version:dkim-signature;
+	bh=9yg6sZKxpGPovWYhqcEmDadaq7D6TC/yIOdUdxkApKg=;
+	b=iqlkYrIk/8h0h8EiuOB3Sf8fjw78VbHvmBrtHmPiQjKh+zHFSPt/+ZimzHA0f/vPFRKYGnj60H4
+	+CgerbWMXhrkakz+c0QH21BKf2of3cuSjHSmIB7JZQ4HMxUVtO4xmu4GAAhpBuDYGsSItbKp/wgmW
+	XRu01BOFM4KGEux5jeznqzhU5ILiHHmEo1pwY9tuU5E63Nzt4sQ/qwwT4AmCE8UJ/nm9RWQihgo3b
+	+k2/64NYENkgFo7kGgyBw7guccqXeKxEgMWQ10s5TBmletROF66BLoj7fEfiSl5ATdlA40X3jELc+
+	gJcKRpFEIeN5pkr4VH1ODuvFnCKtK6qDUX1Q==
+ARC-Authentication-Results: i=1; mx.google.com;
+	dkim=pass header.i=@gmail.com header.s=20161025 header.b=VCzT5uPd; spf=pass
+	(google.com: domain of mvernekar75@gmail.com designates 209.85.220.41 as permitted sender)
+	smtp.mailfrom=mvernekar75@gmail.com;
+	dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com
+Return-Path: <mvernekar75@gmail.com>
+Received-SPF: pass (google.com: domain of mvernekar75@gmail.com designates
+ 209.85.220.41 as permitted sender) client-ip=209.85.220.41;
+Authentication-Results: mx.google.com;
+	dkim=pass header.i=@gmail.com header.s=20161025 header.b=VCzT5uPd; spf=pass
+	(google.com: domain of mvernekar75@gmail.com designates 209.85.220.41 as permitted sender)
+	smtp.mailfrom=mvernekar75@gmail.com;
+	dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=gmail.com; s=20161025;
+	h=mime-version:from:date:message-id:subject:to;
+	bh=9yg6sZKxpGPovWYhqcEmDadaq7D6TC/yIOdUdxkApKg=;
+	b=VCzT5uPd2QJAuj/hZSsD6YO8eY9e+ITn7TPJ+dhVsdgiS61ewniLm8Ytr7lngpBXV5w9QJ/EV+g
+	3BiLaPbhdVMH5uIQK8oFkldYLJSor+y6y3Faq3CqEfpmLrXOHL9x4V4/TWrCaSSNsjfkBVxmTVFFH
+	wpE6og8d6lmC20vdJTlR6UtnHK0xW+Jz7UGapXOkWuuk+Y3v7ikPBjq9dAIvMImGT0EmaIKEXVoje
+	FygyDXifnGGOFMN9CXiXEQHBH49ANOft6slrKiuZYTAWPggQR2ulLPdmsnvahzrCSzkhuGFtVUjIZ
+	S3pI63XlewJkQB7U16cRPLmoB0Bv2FxQVjXA==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;       
+ d=1e100.net; s=20161025;       
+ h=x-gm-message-state:mime-version:from:date:message-id:subject:to;       
+ bh=9yg6sZKxpGPovWYhqcEmDadaq7D6TC/yIOdUdxkApKg=;       
+ b=eHUXAca8sgmgvverGkIFLA3ObrQ/1E+tQf9fc0UJyFlognK/LJSlfRGD1I5KReatd5        
+ jKBtjgLxcc6Q7LhFICMk1cdzV6Vll1em5LRRuHLip0rUkHMgrS/VxbMwPIv9Y1SAxXC3        
+ s0pX8pXtIIeGxoYsBBGdKm41Tk2PovYEXNGAs/2BrE7hXsh7ttstzjqy3Rog9Sm1+wGE        
+ t/WjMpA8iEUVkMLfchc2b7iRloRMaua/DBTqvulsWoXoQ2stHSz12X91IaI01fcjf6jh        
+ ewdHG2oisM3IUprN8x9SWD/6mfx/HxBXkQaGxK92fW1maUCRqbQ1oFER0KDDSiYeqv1z        
+ 52IA==
+X-Gm-Message-State: AOAM5326FiI4/mk4jcFY8Clpb56OSxRuo8vGVCcsMDFfaBLrUGoxuJ2u
+	ANeX9eMXAwyI8IGm70yqVm/q9eSvkxaaPafbp7MrBg==
+X-Google-Smtp-Source: =?us-ascii?q?ABdhPJzVwgJkIzvtPUzigwWVtRmjWp5K+=2FSRWF7FMtOxQkiLLtF1odwRzTF9Y?=
+ =?us-ascii?q?dCKrRn+t43mcq3lVpcphk5X7o4nmBY=3D?=
+MIME-Version: 1.0
+From: Mohit Vernekar <mvernekar75@gmail.com>
+Date: Sat, 1 Aug 2020 23:00:46 +0530
+Message-ID: <CAJei-kJ9CgsCBtxJw-tm9VLNNBHckjNaqP0st0_1N-5Z2LYebg@mail.gmail.com>
+Subject: Test: 2
+To: mohitvernekar23@gmail.com
+Uid: 20
+Folder: INBOX
+PlainText: Hello.
+HtmlBody: <div dir="auto">Hello.</div>
+Content-Type: multipart/alternative; boundary="=-IQJAPkTCJ1KBDP03zTLRDw=="
+
+--=-IQJAPkTCJ1KBDP03zTLRDw==
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: base64
+Content-Id: <30b05420-4b56-4dfd-9dfe-660f6067e3ce>
+
+SGVsbG8uDQo=
+
+--=-IQJAPkTCJ1KBDP03zTLRDw==
+Content-Type: text/html; charset=UTF-8
+Content-Transfer-Encoding: base64
+Content-Id: <28ec120f-ea59-47ed-99b8-9c0a86b220f5>
+
+PGRpdiBkaXI9ImF1dG8iPkhlbGxvLjwvZGl2Pg0K
+
+--=-IQJAPkTCJ1KBDP03zTLRDw==--

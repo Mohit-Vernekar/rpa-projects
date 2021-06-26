@@ -1,0 +1,103 @@
+Delivered-To: mohitvernekar23@gmail.com
+Received: from sonic.gate.mail.ne1.yahoo.com
+	by sonic309.consmr.mail.sg3.yahoo.com with HTTP;
+	Sat, 1 Aug 2020 15:26:26 +0000
+X-Google-Smtp-Source: ABdhPJw3dirARZwcnxEx3L5b1NxCH/8kTZ6JZSVQjsb9i7INMPBPUP/BipzgVWiyhKoT4du7lzFV
+X-Received: by 2002:a63:e50a:: with SMTP id r10mr8025071pgh.285.1596295587686;       
+ Sat, 01 Aug 2020 08:26:27 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1596295587; cv=none; d=google.com;
+	s=arc-20160816;
+	b=nwp6uvjj7DClwo3yDkbo6Y4ioBXlq5esYwSuWvnVST1OLIMfIenyZp9+7fJXakMEs8wxUPdVN/t
+	McAnnuBRgSpZ2KEfQZRvLuqFK/XmCGeKoZdWcBW/RW9SCr6jCxUG9aZVL8Sx09keaDND6WUl2H+ov
+	jghDi8Jtjsk1oI01rbLmDgYhO8OJvLJjISfMN77H/4RLN2RVuDJDxjoGN8KOC0TgIOqSRXcR4MNPj
+	l0xKT3IqC201fEjWNUwWk1jNJx2GGz4mNZzkxCvku9WMYHR9jE7GXRVZ2s0XjcoIp1+M+F82SmXVF
+	ttlFLm+eSUBlJ6uRFDB6fEcoZBNiqMa2fV+w==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com;
+	s=arc-20160816;
+	h=references:mime-version:subject:message-id:to:reply-to:from:date:
+	dkim-signature;
+	bh=tVwLBY46EQTEiJ+L2eSf7KQdoyqkxXzm0PQiysAjnqA=;
+	b=ohlgNdUyOus0WE+F5OnlN7SqMk+T+NO43T6/Mckt3AXt2qjxd1MLKZUiixA4hUmF//bW+T5c2UT
+	+LsZlgrdYRsBppC8eRM6pMGRZ32gaRb52Vn6mefEGY3cZ6AYwjx2YGwI21jHeilroglKn0+RKkkwZ
+	e0HdOKAVIOrKXIYH/Py/Gs/vlENpqTj5T44sRRSO8qlM4ti6fLg40ctUyGQHTfe+hxhAzNkMmY+va
+	4Zp3grB4uN+JDHHqTdMWXZLgIjWAomgm257+D06/afqomenIf0HIj28il6G2i5puFD/2a2VNFylfz
+	JCwxgOPdgWydlzNJuZB1Jpmw8pr/ZO5VtMaw==
+ARC-Authentication-Results: i=1; mx.google.com;
+	dkim=pass header.i=@ymail.com header.s=s2048 header.b=nzL4e5Dw; spf=pass
+	(google.com: domain of vernekarmohit@ymail.com designates 106.10.244.82 as permitted sender)
+	smtp.mailfrom=vernekarmohit@ymail.com;
+	dmarc=pass (p=REJECT sp=REJECT dis=NONE) header.from=ymail.com
+Return-Path: <vernekarmohit@ymail.com>
+Received-SPF: pass (google.com: domain of vernekarmohit@ymail.com designates
+ 106.10.244.82 as permitted sender) client-ip=106.10.244.82;
+Authentication-Results: mx.google.com;
+	dkim=pass header.i=@ymail.com header.s=s2048 header.b=nzL4e5Dw; spf=pass
+	(google.com: domain of vernekarmohit@ymail.com designates 106.10.244.82 as permitted sender)
+	smtp.mailfrom=vernekarmohit@ymail.com;
+	dmarc=pass (p=REJECT sp=REJECT dis=NONE) header.from=ymail.com
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=ymail.com; s=s2048;
+	t=1596295586;
+	bh=tVwLBY46EQTEiJ+L2eSf7KQdoyqkxXzm0PQiysAjnqA=;
+	h=Date:From:Reply-To:To:Subject:References:From:Subject;
+	b=nzL4e5DwnoIRpwozPxXLHudSQmTiJIUBWCHPZV9dSVz2buvB3EV3Bwl7Rxv+2mRpYnhA35iOzcB
+	SmpLpcEX7AaR3X0D/idsVNmM4dDZD6/6anqEYws7pwusxRtdytshhwfvnKsIHrjigOAuyhASfoHTJ
+	BNzQYxF5RcZL12Me8S8EYFh3mQKH4NKThUNH8ndGWrXnKCp0B4nxTTP9+KrOk0FcAA0p243YNxo9N
+	gvIC7miA8WxX6NthiSkxgRGpr81LC6/L71giGNPNGxF80oNtfBHGhTZCZRhU8Gc0cY2ZMm2ut7Qk6
+	4wcbtCInX1BCmg95yfkQJ2ffIEK3BbAE7WUA==
+X-YMail-OSG: A59ojXoVM1l3xOlEA_ebcqzEerPbSR.jc6YAt9qhZ5Irfbm.Abs6ItmG0a9e6eM
+ uF2SQjqrsWK_sn4HY_OYPozRXb7wmDeT.vMSd7XjFhurNDy5DT7qji3.4559fzSK9aNnqFKzz3u3
+ Ky4RlmX8Vq1lAp7yZ3tBSvEOmp5upyOQ_arjQGzxIITDLcpCDzLiN4ncL3ez7cWAOwXYYuSmFgjq
+ WtqFkH_EruQScbygaCiTLNBFtq6pcwqEYsQRZhvawf5weyjKs9aR_oVK0x5O.h_83P49tY8UtRQg
+ _OJ1M9_HNEWHRFue6061MVONKCiCqHNC0frbhJ7FJUnx8_A14cZsHJftrsmBl269V27p1ON1Uqzh
+ 3MEeTGnVqZmhK3xdFKJHF3yHnt0Lc1rZHNIlvdFLVcsGx_.YKsxB.BVRfoUxMNHAxJjnbrg3xPWn
+ JKPJf1mFaesY1kYP9ZVElJAF8DR_gyZ4iqjCSmOHuT.nSQRphfYKqxBbGbL7qUZlqbbMmMcf2Nhc
+ Eu5DRyLV1Na_jjI_ip6iTGy8rNTkSyLzhbdhMIIflyWRtqHT1cv341.a70tkltnUrVVTpLUIdeWV
+ uzlwzQi5oaMBZecxAVnvOW1TStZMcz3jPwNmggqmuaNspsrCPvVZiIxpPDN2s59WztKwAf2kSb7U
+ hx_rxOKVyeqp.nJs48T3SdrD.6k1wLKAWAD4rqsDrebZ8Y8pO9TUxVS64kk6CHZyeb6fgB_oFFGj
+ y3Ncf_vCPhpR7KMP2OlFo5Bc3RmyMTlVUZ9RfNVsxvFWw0KAYduF4OqyDzrg9uU2zGqxthhU1COk
+ VCz1Gt1q5UmzdKpXckP61VkwJH7blVbYPqxwvdEKg8zPAiDWbA3Rtc0fwLWpjaJ0hu0wTjKi82Mm
+ 88LtZw6grG4bGT.olKClWgPa4z_p0MeG.6Yi.4VpdCZP_vjDEs9niA0BLbzJn3A7A7XHD36_8_be
+ CmM7_8B7nAHgis5.xyorYGPiC8B0lnklIvQd.TW5I.s24Z1owbkeF.0DMDjei.P3N5vXswfTwNMD
+ EkIC_Bu4zmrhhRrL182i0wLG8nL2aEvF9MP913qBBWIDRnid_HPfR9EADGz7s5i5XIgjCeOaL1lb
+ hhKcGwb2zZVK4YvbHjPeSFytdR84Ucs.DqbPlK8CrYsIy656Zy73oZCUEx3A0.4Bg.P7JY4qlTAN
+ UzF4e49VdoFIYgBVFPz7Ot.fQc98uo.SfNKMoI9d_qO9prVADIdAfDbB.d1eVMaxjKYQRB3o9ThA
+ TtfIlSCbXTtL9DyjZWzcdsto3h7R1dRXIa5jgX.CYjrhpdDHx2WPPvfH3v1674SzXKRqxnkZZg3e
+ qvRA9YY_A96_50fw7_9K0ovCTeil9aGtepVeZ501Qk32kZUOUhQ--
+Date: Sat, 1 Aug 2020 15:26:21 +0000 (UTC)
+From: Mohit Vernekar <vernekarmohit@ymail.com>
+Reply-To: "vernekarmohit@ymail.com" <vernekarmohit@ymail.com>
+To: "mohitvernekar23@gmail.com" <mohitvernekar23@gmail.com>
+Message-ID: <434486281.8278295.1596295581445@mail.yahoo.com>
+Subject: Test
+MIME-Version: 1.0
+References: <434486281.8278295.1596295581445.ref@mail.yahoo.com>
+X-Mailer: WebService/1.1.16271 YahooMailAndroidMobile YMobile/1.0
+ (com.yahoo.mobile.client.android.mail/6.8.5; Android/8.1.0; O11019;
+ Era_4X_2GB; Xolo; Era_4X_2GB; 5.42; 1344x720;)
+Uid: 14
+Folder: INBOX
+PlainText: Hello.Sent from Yahoo Mail on Android
+HtmlBody: Hello.<br><br><div id="ymail_android_signature"><a
+ id="ymail_android_signature_link"
+ =?us-ascii?q?href=3D=22https=3A=2F=2Fgo=2Eonelink=2Eme=2F107872968=3Fpid=3DInProduct&amp=3Bc=3DGlo?=
+ =?us-ascii?q?bal=5FInternal=5FYGrowth=5FAndroidEmailSig=5F=5FAndroidUsers&amp=3Baf=5Fwl=3D?=
+ =?us-ascii?q?ym&amp=3Baf=5Fsub1=3DInternal&amp=3Baf=5Fsub2=3DGlobal=5FYGrowth&amp=3Baf=5Fsub?=
+ =?us-ascii?q?3=3DEmailSignature=22=3ESent?= from Yahoo Mail on
+ Android</a></div>
+Content-Type: multipart/alternative; boundary="=-PeKVYRq7EPTav3nKFg+vTg=="
+
+--=-PeKVYRq7EPTav3nKFg+vTg==
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: 7bit
+Content-Id: <7d7ad26e-575c-492b-bfaa-af646f1b5c3c>
+
+Hello.
+
+Sent from Yahoo Mail on Android
+--=-PeKVYRq7EPTav3nKFg+vTg==
+Content-Type: text/html; charset=UTF-8
+Content-Transfer-Encoding: 7bit
+Content-Id: <c91caed8-da20-4533-ae52-26535a6f71fa>
+
+Hello.<br><br><div id="ymail_android_signature"><a id="ymail_android_signature_link" href="https://go.onelink.me/107872968?pid=InProduct&amp;c=Global_Internal_YGrowth_AndroidEmailSig__AndroidUsers&amp;af_wl=ym&amp;af_sub1=Internal&amp;af_sub2=Global_YGrowth&amp;af_sub3=EmailSignature">Sent from Yahoo Mail on Android</a></div>
+--=-PeKVYRq7EPTav3nKFg+vTg==--
